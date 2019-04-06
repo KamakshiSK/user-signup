@@ -1,0 +1,44 @@
+{% extends "base_sign-up.html" %}
+
+{% block signup %}
+<form method = "POST">
+    <table>
+        <tr>
+            <td>    <h1>Signup</h1>     </td>
+            <td>    </td>
+            <td>    </td>
+        </tr>
+
+        <tr>
+            <td>    <label for="uname">User Name </label>           </td>
+            <td>    <input type="text" name="uname" value= "{{uname}}" />              </td>
+            <td>    <label class= "error">{{name_error}}</label>    </td>
+        </tr>
+
+        <tr>
+            <td>    <label for="pwd">Password</label>               </td>
+            <td>    <input type="password" name="pwd" />                </td>
+            <td>    <label class="error">{{pwd_error}}</label>      </td>
+        </tr>
+
+        <tr>
+            <td>    <label for="confirm-pwd">Verify Password </label>   </td>
+            <td>    <input type="password" name="confirm-pwd"/>             </td>
+            <td>    <label class="error">{{conf_pwd_error}}</label>     </td>
+        </tr>
+
+        <tr>
+            <td>    <label for="email">Email (optional) </label>   </td>
+            <td>    <input type="text" name="email" value= "{{email}}" />             </td>
+            <td>    <label class="error">{{email_error}}</label>     </td>
+        </tr>
+
+    <tfoot>
+        <tr>
+            <td>  <br>   <input type= "submit" name="submit" value="Submit"/>      </td>
+        </tr>
+    </tfoot>
+
+    </table>
+</form>
+{% endblock %}
